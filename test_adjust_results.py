@@ -1,6 +1,7 @@
 from get_pet_labels import get_pet_labels
 from classify_images import classify_images
 from adjust_results4_isadog import adjust_results4_isadog
+# Author: Roman Duirs
 
 if __name__ == '__main__':
 
