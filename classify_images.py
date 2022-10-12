@@ -70,7 +70,7 @@ def classify_images(images_dir, results_dic, model):
         inference = classifier(join(images_dir,i),model)
 #         results_dic[i].append([x.lower() for x in inference.split(', ')])
 #         results_dic[i].append(results_dic[i][0] in results_dic[i][1])
-        results_dic[i].append(inference.lower())
+        results_dic[i].append(inference.lower().strip())
         results_dic[i].append(results_dic[i][0] in results_dic[i][1])          
         
         

@@ -20,6 +20,7 @@
 from os import listdir
 from pathlib import Path
 
+
 # TODO 2: Define get_pet_labels function below please be certain to replace None
 #       in the return statement with results_dic dictionary that you create 
 #       with this function
@@ -45,7 +46,8 @@ def get_pet_labels(image_dir):
     # function
     return_dict = {}
     files = listdir(image_dir)
-    for i in files:
+    files_filtered = [x for x in files if x.startswith('.') is False and x.endswith(('jpg', '.jpeg', '.png', '.tiff'))]
+    for i in files_filtered:
         filename = Path(i)
         filename_stripped = filename.stem
         label = (' '.join(filename_stripped.split('_')[:-1])).lower()
